@@ -32,7 +32,7 @@
         }
 
         /* Getter et Setter de l'hôtel de la réservation */
-        public function getClients() : Hotel{
+        public function getHotel() : Hotel{
             return $this->_hotel;
         }
         public function setHotel(Hotel $hotel){
