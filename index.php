@@ -49,4 +49,5 @@
     $chambre10RegentParis = new Chambre($regentParis, 10, 3, 300, "oui", "DISPONIBLE");
 
     $clientVirgileGibello = new Client("Virgile", "GIBELLO");
+    $clientMickaMurmann = new Client("Micka", "MURMANN");
 ?>
