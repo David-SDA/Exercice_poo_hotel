@@ -77,6 +77,11 @@
             array_push($this->_chambresDansHotel, $chambresDansHotel);
         }
 
+        /* Méthode pour déterminer le nombre de chambres de l'hôtel */
+        public function getNombresChambres() : int{
+            return count($this->_chambresDansHotel);
+        }
+
         /* Méthode __toString de la classe */
         public function __toString(){
             return $this->_nom . " " . $this->_nombreEtoiles . " " . $this->_ville;
