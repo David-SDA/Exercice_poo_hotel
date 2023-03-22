@@ -52,34 +52,4 @@
     $clientMickaMurmann = new Client("Micka", "MURMANN");
     
     $reservationVirgileGibelloHiltonStrasbourg1 = new Reservation($clientVirgileGibello, $chambre17HiltonStrasbourg, $hiltonStrasbourg, "2021-01-01", "2021-01-01");
-    echo $reservationVirgileGibelloHiltonStrasbourg1;
-    echo "<br>";
-    echo $reservationVirgileGibelloHiltonStrasbourg1->getClient();
-    echo "<br>";
-    echo $reservationVirgileGibelloHiltonStrasbourg1->getChambre();
-    echo "<br>";
-    echo $reservationVirgileGibelloHiltonStrasbourg1->getHotel();
-    echo "<br>";
-    echo date_format($reservationVirgileGibelloHiltonStrasbourg1->getDateDebut(), "d-m-Y");
-    echo "<br>";
-    echo date_format($reservationVirgileGibelloHiltonStrasbourg1->getDateFin(), "d-m-Y");
-    echo "<br>";
-
-    $reservationVirgileGibelloHiltonStrasbourg1->setClient($clientMickaMurmann);
-    $reservationVirgileGibelloHiltonStrasbourg1->setChambre($chambre3RegentParis);
-    $reservationVirgileGibelloHiltonStrasbourg1->setHotel($regentParis);
-    $reservationVirgileGibelloHiltonStrasbourg1->setDateDebut("2021-03-15");
-    $reservationVirgileGibelloHiltonStrasbourg1->setDateFin("2021-04-01");
-
-    echo $reservationVirgileGibelloHiltonStrasbourg1;
-    echo "<br>";
-    echo $reservationVirgileGibelloHiltonStrasbourg1->getClient();
-    echo "<br>";
-    echo $reservationVirgileGibelloHiltonStrasbourg1->getChambre();
-    echo "<br>";
-    echo $reservationVirgileGibelloHiltonStrasbourg1->getHotel();
-    echo "<br>";
-    echo date_format($reservationVirgileGibelloHiltonStrasbourg1->getDateDebut(), "d-m-Y");
-    echo "<br>";
-    echo date_format($reservationVirgileGibelloHiltonStrasbourg1->getDateFin(), "d-m-Y");
 ?>
