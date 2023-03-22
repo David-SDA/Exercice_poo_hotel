@@ -14,34 +14,4 @@
     //8) On pourra afficher les informations des chambres d'un hôtel
 
     $hiltonStrasbourg = new Hotel("Hilton", 4, "10 route de la Gare", 67200, "Strasbourg");
-    echo $hiltonStrasbourg;
-    echo "<br>";
-    echo $hiltonStrasbourg->getNom();
-    echo "<br>";
-    echo $hiltonStrasbourg->getNombreEtoiles();
-    echo "<br>";
-    echo $hiltonStrasbourg->getAdresse();
-    echo "<br>";
-    echo $hiltonStrasbourg->getCodePostale();
-    echo "<br>";
-    echo $hiltonStrasbourg->getVille();
-    echo "<br>";
-    echo "<br>";
-    $hiltonStrasbourg->setNom("Regent");
-    $hiltonStrasbourg->setNombreEtoiles(3);
-    $hiltonStrasbourg->setAdresse("61 Rue Dauphine");
-    $hiltonStrasbourg->setCodePostale(75006);
-    $hiltonStrasbourg->setVille("Paris");
-    echo $hiltonStrasbourg;
-    echo "<br>";
-    echo $hiltonStrasbourg->getNom();
-    echo "<br>";
-    echo $hiltonStrasbourg->getNombreEtoiles();
-    echo "<br>";
-    echo $hiltonStrasbourg->getAdresse();
-    echo "<br>";
-    echo $hiltonStrasbourg->getCodePostale();
-    echo "<br>";
-    echo $hiltonStrasbourg->getVille();
-    echo "<br>";
 ?>
