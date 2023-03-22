@@ -5,10 +5,10 @@
         private int $_nombresLits;
         private int $_prix;
         private string $_wifi;
-        private string $_etat;
+        private bool $_etat;
 
         /* Méthode __construct de la classe */
-        public function __construct(Hotel $hotel, int $numero, int $nombresLits, int $prix, string $wifi, string $etat){
+        public function __construct(Hotel $hotel, int $numero, int $nombresLits, int $prix, string $wifi, bool $etat){
             $this->_hotel = $hotel;
             $this->_numero = $numero;
             $this->_nombresLits = $nombresLits;
@@ -58,10 +58,10 @@
         }
 
         /* Getter et Setter de l'état de la chambre (réservée ou disponible) */
-        public function getEtat() : string{
+        public function getEtat() : bool{
             return $this->_etat;
         }
-        public function setEtat(string $etat){
+        public function setEtat(bool $etat){
             $this->_etat = $etat;
         }
 
