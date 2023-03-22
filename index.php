@@ -49,20 +49,4 @@
     $chambre10RegentParis = new Chambre($regentParis, 10, 3, 300, "oui", "DISPONIBLE");
 
     $clientVirgileGibello = new Client("Virgile", "GIBELLO");
-    echo $clientVirgileGibello;
-    echo "<br>";
-    echo $clientVirgileGibello->getPrenom();
-    echo "<br>";
-    echo $clientVirgileGibello->getNom();
-    echo "<br>";
-
-    $clientVirgileGibello->setPrenom("Micka");
-    $clientVirgileGibello->setNom("MURMANN");
-
-    echo $clientVirgileGibello;
-    echo "<br>";
-    echo $clientVirgileGibello->getPrenom();
-    echo "<br>";
-    echo $clientVirgileGibello->getNom();
-    echo "<br>";
 ?>
