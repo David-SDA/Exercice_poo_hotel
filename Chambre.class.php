@@ -15,6 +15,7 @@
             $this->_prix = $prix;
             $this->_wifi = $wifi;
             $this->_etat = $etat;
+            $this->_hotel->setChambresDansHotel($this);
         }
 
         /* Getter et Setter de l'hôtel de cette chambre */
