@@ -18,7 +18,7 @@
 
     $chambre1HiltonStrasbourg = new Chambre($hiltonStrasbourg, 1, 2, 120, "non", "DISPONIBLE");
     $chambre2HiltonStrasbourg = new Chambre($hiltonStrasbourg, 2, 2, 120, "non", "DISPONIBLE");
-    $chambre3HiltonStrasbourg = new Chambre($hiltonStrasbourg, 3, 2, 120, "non", "RÉSERVÉE");
+    $chambre3HiltonStrasbourg = new Chambre($hiltonStrasbourg, 3, 2, 120, "non", "DISPONIBLE");
     $chambre4HiltonStrasbourg = new Chambre($hiltonStrasbourg, 4, 2, 120, "non", "DISPONIBLE");
     $chambre5HiltonStrasbourg = new Chambre($hiltonStrasbourg, 5, 2, 120, "non", "DISPONIBLE");
     $chambre6HiltonStrasbourg = new Chambre($hiltonStrasbourg, 6, 2, 120, "non", "DISPONIBLE");
@@ -32,19 +32,19 @@
     $chambre14HiltonStrasbourg = new Chambre($hiltonStrasbourg, 14, 2, 120, "non", "DISPONIBLE");
     $chambre15HiltonStrasbourg = new Chambre($hiltonStrasbourg, 15, 2, 120, "non", "DISPONIBLE");
     $chambre16HiltonStrasbourg = new Chambre($hiltonStrasbourg, 16, 3, 300, "oui", "DISPONIBLE");
-    $chambre17HiltonStrasbourg = new Chambre($hiltonStrasbourg, 17, 3, 300, "oui", "RÉSERVÉ");
+    $chambre17HiltonStrasbourg = new Chambre($hiltonStrasbourg, 17, 3, 300, "oui", "DISPONIBLE");
     $chambre18HiltonStrasbourg = new Chambre($hiltonStrasbourg, 18, 3, 300, "oui", "DISPONIBLE");
     $chambre19HiltonStrasbourg = new Chambre($hiltonStrasbourg, 19, 4, 500, "oui", "DISPONIBLE");
-    $chambre20HiltonStrasbourg = new Chambre($hiltonStrasbourg, 20, 4, 500, "oui", "RÉSERVÉE");
+    $chambre20HiltonStrasbourg = new Chambre($hiltonStrasbourg, 20, 4, 500, "oui", "DISPONIBLE");
     
     $chambre1RegentParis = new Chambre($regentParis, 1, 2, 150, "non", "DISPONIBLE");
     $chambre2RegentParis = new Chambre($regentParis, 2, 2, 150, "non", "DISPONIBLE");
     $chambre3RegentParis = new Chambre($regentParis, 3, 2, 150, "non", "DISPONIBLE");
-    $chambre4RegentParis = new Chambre($regentParis, 4, 2, 150, "non", "RÉSERVÉE");
+    $chambre4RegentParis = new Chambre($regentParis, 4, 2, 150, "non", "DISPONIBLE");
     $chambre5RegentParis = new Chambre($regentParis, 5, 2, 150, "non", "DISPONIBLE");
     $chambre6RegentParis = new Chambre($regentParis, 6, 3, 300, "oui", "DISPONIBLE");
     $chambre7RegentParis = new Chambre($regentParis, 7, 3, 300, "oui", "DISPONIBLE");
-    $chambre8RegentParis = new Chambre($regentParis, 8, 3, 300, "oui", "RÉSERVÉE");
+    $chambre8RegentParis = new Chambre($regentParis, 8, 3, 300, "oui", "DISPONIBLE");
     $chambre9RegentParis = new Chambre($regentParis, 9, 3, 300, "oui", "DISPONIBLE");
     $chambre10RegentParis = new Chambre($regentParis, 10, 3, 300, "oui", "DISPONIBLE");
 
