@@ -11,7 +11,7 @@
         public function getReservationsDuClient() : array{
             return $this->_reservationsDuClient;
         }
-        public function setReservationsDuClient(array $reservationsDuClient){
+        public function setReservationsDuClient(Reservation $reservationsDuClient){
             array_push($this->_reservationsDuClient, $reservationsDuClient);
         }
     }

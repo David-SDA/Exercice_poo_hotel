@@ -73,7 +73,7 @@
         public function getChambresDansHotel() : array{
             return $this->_chambresDansHotel;
         }
-        public function setChambresDansHotel(Reservation $chambresDansHotel){
+        public function setChambresDansHotel(Chambre $chambresDansHotel){
             array_push($this->_chambresDansHotel, $chambresDansHotel);
         }
 
