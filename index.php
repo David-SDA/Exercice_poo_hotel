@@ -54,9 +54,4 @@
     $reservationVirgileGibelloHiltonStrasbourg1 = new Reservation($clientVirgileGibello, $chambre17HiltonStrasbourg, $hiltonStrasbourg, "2021-01-01", "2021-01-01");
     $reservationMickaMurmannHiltonStrasbourg1 = new Reservation($clientMickaMurmann, $chambre3HiltonStrasbourg, $hiltonStrasbourg, "2021-03-11", "2021-03-15");
     $reservationMickaMurmannHiltonStrasbourg2 = new Reservation($clientMickaMurmann, $chambre4HiltonStrasbourg, $hiltonStrasbourg, "2021-04-01", "2021-04-17");
-
-    foreach($clientMickaMurmann->getReservationsDuClient() as $reservation){
-        echo $reservation;
-        echo "<br>";
-    }
 ?>
