@@ -48,6 +48,15 @@
     $chambre9RegentParis = new Chambre($regentParis, 9, 3, 300, "oui", true);
     $chambre10RegentParis = new Chambre($regentParis, 10, 3, 300, "oui", true);
 
+    if($chambre10RegentParis->getEtat()){
+        echo "vrai";
+    }
+    echo "<br>";
+    $chambre10RegentParis->setEtat(false);
+    if(!$chambre10RegentParis->getEtat()){
+        echo "faux";
+    }
+
     $clientVirgileGibello = new Client("Virgile", "GIBELLO");
     $clientMickaMurmann = new Client("Micka", "MURMANN");
     
