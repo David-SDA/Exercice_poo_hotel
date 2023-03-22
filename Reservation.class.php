@@ -13,6 +13,7 @@
             $this->_hotel = $hotel;
             $this->_dateDebut = new DateTime($dateDebut);
             $this->_dateFin = new DateTime($dateFin);
+            $this->_client->setReservationsDuClient($this);
         }
 
         /* Getter et Setter du client qui a fait cette réservation */
