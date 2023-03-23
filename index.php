@@ -55,6 +55,11 @@
     $reservationMickaMurmannHiltonStrasbourg1 = new Reservation($clientMickaMurmann, $chambre3HiltonStrasbourg, "2021-03-11", "2021-03-15");
     $reservationMickaMurmannHiltonStrasbourg2 = new Reservation($clientMickaMurmann, $chambre4HiltonStrasbourg, "2021-04-01", "2021-04-17");
 
+    echo $hiltonStrasbourg->getInformationsHotel();
+    echo "<br>";
+    echo $regentParis->getInformationsHotel();
+    echo "<br>";
+
     echo $hiltonStrasbourg->getEtatChambres();
     echo "<br>";
     echo $regentParis->getEtatChambres();

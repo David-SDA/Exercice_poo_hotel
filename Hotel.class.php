@@ -88,7 +88,20 @@
             return $this->getNombresChambres() - $this->getNombresChambresReservee();
         }
 
-        /* Méthode pour l'affichage des informations de toutes les chambres */
+        /* Méthode pour obtenir l'affichage des informations de l'hôtel */
+        public function getInformationsHotel(){
+            $result = "$this->_nom ";
+            for($i=0; $i<$this->_nombreEtoiles; $i++){
+                $result .= "*";
+            }
+            $result .= " $this->_ville :<br>";
+            $result .= "Nombre de chambres : " . $this->getNombresChambres() . "<br>";
+            $result .= "Nombre de chambres réservées : " . $this->getNombresChambresReservee() . "<br>";
+            $result .= "Nombre de chambres disponibles : " . $this->getNombresChambresDisponible() . "<br>";
+            return $result;
+        }
+
+        /* Méthode pour obtenir l'affichage des informations de toutes les chambres */
         public function getEtatChambres(){
             $result = "<table border=1>
                             <thead>
