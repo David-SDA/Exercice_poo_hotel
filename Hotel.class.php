@@ -117,7 +117,7 @@
             else{
                 $result .= "<i>" . $this->getNombresChambresReservee() . " RÉSERVATIONS</i><br>";
                 foreach($this->_reservationsDansHotel as $reservation){
-                    $result .= $reservation->getClient() . " - " . $reservation->getChambre() . " du " . $reservation->getDateDebut()->format("d-m-Y") . " au " . $reservation->getDateFin()->format("d-m-Y") . "<br>";
+                    $result .= $reservation->getClient() . " - " . $reservation->getChambre() . " du - " . $reservation->getDateDebut()->format("d-m-Y") . " au " . $reservation->getDateFin()->format("d-m-Y") . "<br>";
                 }
             }
             return $result;
