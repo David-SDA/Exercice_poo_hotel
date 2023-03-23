@@ -5,9 +5,6 @@
         private string $_adresse;
         private int $_codePostale;
         private string $_ville;
-        /* ce qui est en commentaire sera des fonctions */
-        // private int $_chambresReservees;
-        // private int $_chambresDisponibles;
         private array $_reservationsDansHotel = [];//définit à l'exterieur
         private array $_chambresDansHotel = [];//définit à l'exterieur (il faut bien avoir $_nombreChambres chambres)
 
@@ -81,9 +78,14 @@
             return count($this->_chambresDansHotel);
         }
 
-        /* Méthode pour déterminer le nombre de chambre réservée */
+        /* Méthode pour déterminer le nombre de chambre réservée de l'hôtel */
         public function getNombresChambresReservee() : int{
             return count($this->_reservationsDansHotel);
+        }
+
+        /* Méthode pour déterminer le nombre de chambre disponibles de l'hôtel */
+        public function getNombresChambresDisponible() : int{
+            return $this->getNombresChambres() - $this->getNombresChambresReservee();
         }
 
         /* Méthode __toString de la classe */
