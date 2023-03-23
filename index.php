@@ -13,7 +13,7 @@
     //7) On pourra afficher les réservations d'un client
     //8) On pourra afficher les informations des chambres d'un hôtel
 
-    $hiltonStrasbourg = new Hotel("Hilton", 4, "10 route de la Gare", 67200, "Strasbourg");
+    $hiltonStrasbourg = new Hotel("Hilton", 4, "10 route de la Gare", 67000, "Strasbourg");
     $regentParis = new Hotel("Regent", 3, "61 Rue Dauphine", 75006, "Paris");
 
     $chambre1HiltonStrasbourg = new Chambre($hiltonStrasbourg, 1, 2, 120, "non", true);

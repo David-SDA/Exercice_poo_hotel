@@ -101,6 +101,7 @@
         /* Méthode pour obtenir l'affichage des informations de l'hôtel */
         public function getInformationsHotel() : string{
             $result = "<b>" . $this->getTitreHotel() . " :</b><br>";
+            $result .= "<i>" . $this->_adresse . " " . $this->_codePostale . " " . $this->_ville . "</i><br>";
             $result .= "Nombre de chambres : " . $this->getNombresChambres() . "<br>";
             $result .= "Nombre de chambres réservées : " . $this->getNombresChambresReservee() . "<br>";
             $result .= "Nombre de chambres disponibles : " . $this->getNombresChambresDisponible() . "<br>";
