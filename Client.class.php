@@ -42,7 +42,7 @@
             else{
                 $result .= "<i>" . $this->getNombresReservation() . " RÉSERVATIONS</i><br>";
                 foreach($this->_reservationsDuClient as $reservation){
-                    $result .= "<b>Hotel : " . $reservation->getHotel()->getTitreHotel() . "</b> / " . $reservation->getChambre() . " (" . $reservation->getChambre()->getNombresLits() . " lits - " . $reservation->getChambre()->getPrix() . " € - Wifi : " . $reservation->getChambre()->getWifi() . ") du " . $reservation->getDateDebut()->format("d-m-Y") . " au " . $reservation->getDateFin()->format("d-m-Y") . "<br>";
+                    $result .= "<b>Hotel : " . $reservation->getChambre()->getHotel()->getTitreHotel() . "</b> / " . $reservation->getChambre() . " (" . $reservation->getChambre()->getNombresLits() . " lits - " . $reservation->getChambre()->getPrix() . " € - Wifi : " . $reservation->getChambre()->getWifi() . ") du " . $reservation->getDateDebut()->format("d-m-Y") . " au " . $reservation->getDateFin()->format("d-m-Y") . "<br>";
                 }
                 $result .= "<i>Total : " . $this->getArgentTotalReservations() . " €</i>";
             }

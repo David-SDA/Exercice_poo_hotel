@@ -2,7 +2,6 @@
     class Reservation{
         private Client $_client;
         private Chambre $_chambre;
-        private Hotel $_hotel;
         private DateTime $_dateDebut;
         private DateTime $_dateFin;
 
@@ -10,11 +9,10 @@
         public function __construct(Client $client, Chambre $chambre, string $dateDebut, string $dateFin){
             $this->_client = $client;
             $this->_chambre = $chambre;
-            $this->_hotel = $this->_chambre->getHotel();//pour éviter de réserver un chambre d'hôtel dans un hôtel pas concerné
             $this->_dateDebut = new DateTime($dateDebut);
             $this->_dateFin = new DateTime($dateFin);
             $this->_client->setReservationsDuClient($this);
-            $this->_hotel->setReservationsDansHotel($this);
+            $this->_chambre->getHotel()->setReservationsDansHotel($this);
             $this->_chambre->setEtat(false);
         }
 
@@ -32,14 +30,6 @@
         }
         public function setChambre(Chambre $chambre){
             $this->_chambre = $chambre;
-        }
-
-        /* Getter et Setter de l'hôtel de la réservation */
-        public function getHotel() : Hotel{
-            return $this->_hotel;
-        }
-        public function setHotel(Hotel $hotel){
-            $this->_hotel = $hotel;
         }
 
         /* Getter et Setter de la date de début de la réservation */
@@ -60,7 +50,7 @@
 
         /* Méthode __toString de la classe */
         public function __toString(){
-            return $this->_client . " " . $this->_hotel . " " . $this->_chambre;
+            return $this->_client . " " . $this->_chambre->getHotel() . " " . $this->_chambre;
         }
     }
 ?>
