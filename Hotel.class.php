@@ -81,6 +81,11 @@
             return count($this->_chambresDansHotel);
         }
 
+        /* Méthode pour déterminer le nombre de chambre réservée */
+        public function getNombresChambresReservee() : int{
+            return count($this->_reservationsDansHotel);
+        }
+
         /* Méthode __toString de la classe */
         public function __toString(){
             return $this->_nom . " " . $this->_nombreEtoiles . " " . $this->_ville;
