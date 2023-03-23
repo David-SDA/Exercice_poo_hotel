@@ -3,13 +3,13 @@
         private string $_nom;
         private int $_nombreEtoiles;
         private string $_adresse;
-        private int $_codePostale;
+        private string $_codePostale;
         private string $_ville;
         private array $_reservationsDansHotel = [];//définit à l'exterieur
         private array $_chambresDansHotel = [];//définit à l'exterieur
 
         /* Méthode __construct de la classe */
-        public function __construct(string $nom, int $nombreEtoiles, string $adresse, int $codePostale, string $ville){
+        public function __construct(string $nom, int $nombreEtoiles, string $adresse, string $codePostale, string $ville){
             $this->_nom = $nom;
             $this->_nombreEtoiles = $nombreEtoiles;
             $this->_adresse = $adresse;
@@ -42,10 +42,10 @@
         }
 
         /* Getter et Setter pour le code postale de l'hôtel */
-        public function getCodePostale() : int{
+        public function getCodePostale() : string{
             return $this->_codePostale;
         }
-        public function setCodePostale(int $codePostale){
+        public function setCodePostale(string $codePostale){
             $this->_codePostale = $codePostale;
         }
 
