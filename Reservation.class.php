@@ -7,10 +7,10 @@
         private DateTime $_dateFin;
 
         /* Méthode __construct de la classe */
-        public function __construct(Client $client, Chambre $chambre, Hotel $hotel, string $dateDebut, string $dateFin){
+        public function __construct(Client $client, Chambre $chambre, string $dateDebut, string $dateFin){
             $this->_client = $client;
             $this->_chambre = $chambre;
-            $this->_hotel = $hotel;
+            $this->_hotel = $this->_chambre->getHotel();//pour éviter de réserver un chambre d'hôtel dans un hôtel pas concerné
             $this->_dateDebut = new DateTime($dateDebut);
             $this->_dateFin = new DateTime($dateFin);
             $this->_client->setReservationsDuClient($this);
