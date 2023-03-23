@@ -6,7 +6,6 @@
         private int $_codePostale;
         private string $_ville;
         /* ce qui est en commentaire sera des fonctions */
-        // private int $_nombreChambres;
         // private int $_chambresReservees;
         // private int $_chambresDisponibles;
         private array $_reservationsDansHotel = [];//définit à l'exterieur
