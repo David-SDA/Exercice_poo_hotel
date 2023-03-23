@@ -60,6 +60,11 @@
     echo $regentParis->getInformationsHotel();
     echo "<br>";
 
+    echo $hiltonStrasbourg->getInformationsReservations();
+    echo "<br>";
+    echo $regentParis->getInformationsReservations();
+    echo "<br><br>";
+
     echo $hiltonStrasbourg->getEtatChambres();
     echo "<br>";
     echo $regentParis->getEtatChambres();

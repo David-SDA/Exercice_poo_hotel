@@ -27,7 +27,7 @@
 
         /* Méthode __toString de la classe */
         public function __toString(){
-            return $this->_prenom . ' ' . $this->_nom;
+            return $this->_prenom . ' ' . strtoupper($this->_nom);
         }
     }
 ?>
