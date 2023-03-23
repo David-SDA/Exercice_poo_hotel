@@ -1,6 +1,6 @@
 <?php
     class Client extends Personne{
-        private array $_reservationsDuClient = [];
+        private array $_reservationsDuClient = [];//définit à l'exterieur
 
         /* Méthode __construct de la classe */
         public function __construct(string $prenom, string $nom){

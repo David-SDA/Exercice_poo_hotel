@@ -6,7 +6,7 @@
         private int $_codePostale;
         private string $_ville;
         private array $_reservationsDansHotel = [];//définit à l'exterieur
-        private array $_chambresDansHotel = [];//définit à l'exterieur (il faut bien avoir $_nombreChambres chambres)
+        private array $_chambresDansHotel = [];//définit à l'exterieur
 
         /* Méthode __construct de la classe */
         public function __construct(string $nom, int $nombreEtoiles, string $adresse, int $codePostale, string $ville){
@@ -86,6 +86,37 @@
         /* Méthode pour déterminer le nombre de chambre disponibles de l'hôtel */
         public function getNombresChambresDisponible() : int{
             return $this->getNombresChambres() - $this->getNombresChambresReservee();
+        }
+
+        /* Méthode pour l'affichage des informations de toutes les chambres */
+        public function getEtatChambres(){
+            $result = "<table border=1>
+                            <thead>
+                                <tr>
+                                    <td><b>CHAMBRE</b></td>
+                                    <td><b>PRIX</b></td>
+                                    <td><b>WIFI</b></td>
+                                    <td><b>ETAT</b></td>
+                                </tr>
+                            </thead>
+                            <tbody>";
+                            foreach($this->_chambresDansHotel as $chambre){
+                                $result .= "<tr>
+                                                <td>" . $chambre . "</td>
+                                                <td>" . $chambre->getPrix() . " €</td>
+                                                <td>" . $chambre->getWifi() . "</td>
+                                                <td>";
+                                                    if($chambre->getEtat()){
+                                                        $result .= "DISPONIBLE";
+                                                    }
+                                                    else{
+                                                        $result .= "<i>RÉSERVÉE</i>";
+                                                    }
+                                    $result .= "</td>
+                                            </tr>";
+                             }                            
+            $result .= "</tbody></table>";
+            return $result;              
         }
 
         /* Méthode __toString de la classe */

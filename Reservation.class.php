@@ -15,6 +15,7 @@
             $this->_dateFin = new DateTime($dateFin);
             $this->_client->setReservationsDuClient($this);
             $this->_hotel->setReservationsDansHotel($this);
+            $this->_chambre->setEtat(false);
         }
 
         /* Getter et Setter du client qui a fait cette réservation */
