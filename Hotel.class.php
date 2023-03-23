@@ -88,13 +88,19 @@
             return $this->getNombresChambres() - $this->getNombresChambresReservee();
         }
 
-        /* Méthode pour obtenir l'affichage des informations de l'hôtel */
-        public function getInformationsHotel() : string{
-            $result = "<b>$this->_nom ";
+        /* Méthode pour obtenir l'affichage du nom et de la ville de l'hôtel avec le nombre d'étoile */
+        public function getTitreHotel() : string{
+            $result = "$this->_nom ";
             for($i=0; $i<$this->_nombreEtoiles; $i++){
                 $result .= "*";
             }
-            $result .= " $this->_ville :</b><br>";
+            $result .= " $this->_ville";
+            return $result;
+        }
+        
+        /* Méthode pour obtenir l'affichage des informations de l'hôtel */
+        public function getInformationsHotel() : string{
+            $result = "<b>" . $this->getTitreHotel() . " :</b><br>";
             $result .= "Nombre de chambres : " . $this->getNombresChambres() . "<br>";
             $result .= "Nombre de chambres réservées : " . $this->getNombresChambresReservee() . "<br>";
             $result .= "Nombre de chambres disponibles : " . $this->getNombresChambresDisponible() . "<br>";
@@ -103,16 +109,12 @@
 
         /* Méthode pour obtenir l'affichage des informations des réservations dans l'hôtel */
         public function getInformationsReservations() : string{
-            $result = "<b>Réservation de l'hôtel $this->_nom ";
-            for($i=0; $i<$this->_nombreEtoiles; $i++){
-                $result .= "*";
-            }
-            $result .= " $this->_ville :</b><br>";
+            $result = "<b>Réservations de l'hôtel " . $this->getTitreHotel() . " :</b><br>";
             if(empty($this->_reservationsDansHotel)){
                 $result .= "Aucune réservation !";
             }
             else{
-                $result .= "<i>" . $this->getNombresChambresReservee() . " RÉSERVATIONS</b><br>";
+                $result .= "<i>" . $this->getNombresChambresReservee() . " RÉSERVATIONS</i><br>";
                 foreach($this->_reservationsDansHotel as $reservation){
                     $result .= $reservation->getClient() . " - " . $reservation->getChambre() . " du " . $reservation->getDateDebut()->format("d-m-Y") . " au " . $reservation->getDateFin()->format("d-m-Y") . "<br>";
                 }
@@ -122,7 +124,8 @@
 
         /* Méthode pour obtenir l'affichage des informations de toutes les chambres */
         public function getEtatChambres() : string{
-            $result = "<table border=1>
+            $result = "Status des chambre de <b>" . $this->getTitreHotel() . " :</b><br>";
+            $result .= "<table border=1>
                             <thead>
                                 <tr>
                                     <td><b>CHAMBRE</b></td>
