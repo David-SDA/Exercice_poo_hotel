@@ -51,7 +51,7 @@
     $clientVirgileGibello = new Client("Virgile", "GIBELLO");
     $clientMickaMurmann = new Client("Micka", "MURMANN");
     
-    $reservationVirgileGibelloHiltonStrasbourg1 = new Reservation($clientVirgileGibello, $chambre17HiltonStrasbourg, "2021-01-01", "2021-01-01");
+    $reservationVirgileGibelloHiltonStrasbourg1 = new Reservation($clientVirgileGibello, $chambre17HiltonStrasbourg, "2021-01-01", "2021-01-03");
     $reservationMickaMurmannHiltonStrasbourg1 = new Reservation($clientMickaMurmann, $chambre3HiltonStrasbourg, "2021-03-11", "2021-03-15");
     $reservationMickaMurmannHiltonStrasbourg2 = new Reservation($clientMickaMurmann, $chambre4HiltonStrasbourg, "2021-04-01", "2021-04-17");
 
@@ -63,6 +63,11 @@
     echo $hiltonStrasbourg->getInformationsReservations();
     echo "<br>";
     echo $regentParis->getInformationsReservations();
+    echo "<br><br>";
+
+    echo $clientMickaMurmann->getInformationsReservations();
+    echo "<br><br>";
+    echo $clientVirgileGibello->getInformationsReservations();
     echo "<br><br>";
 
     echo $hiltonStrasbourg->getEtatChambres();
