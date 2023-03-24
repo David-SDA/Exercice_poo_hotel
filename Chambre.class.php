@@ -4,11 +4,11 @@
         private int $_numero;
         private int $_nombresLits;
         private int $_prix;
-        private string $_wifi;
+        private bool $_wifi;
         private bool $_etat;
 
         /* Méthode __construct de la classe */
-        public function __construct(Hotel $hotel, int $numero, int $nombresLits, int $prix, string $wifi, bool $etat){
+        public function __construct(Hotel $hotel, int $numero, int $nombresLits, int $prix, bool $wifi, bool $etat){
             $this->_hotel = $hotel;
             $this->_numero = $numero;
             $this->_nombresLits = $nombresLits;
@@ -51,10 +51,10 @@
         }
 
         /* Getter et Setter du wifi de la chambre (oui ou non) */
-        public function getWifi() :string{
+        public function getWifi() : bool{
             return $this->_wifi;
         }
-        public function setWifi(string $wifi){
+        public function setWifi(bool $wifi){
             $this->_wifi = $wifi;
         }
 

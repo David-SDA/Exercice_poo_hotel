@@ -137,10 +137,11 @@
                             </thead>
                             <tbody>";
                             foreach($this->_chambresDansHotel as $chambre){
+                                $wifi = ($chambre->getWifi()) ? "📶" :null;
                                 $result .= "<tr>
                                                 <td>" . $chambre . "</td>
                                                 <td>" . $chambre->getPrix() . " €</td>
-                                                <td>" . $chambre->getWifi() . "</td>
+                                                <td>" . $wifi   . "</td>
                                                 <td>";
                                                     if($chambre->getEtat()){
                                                         $result .= "DISPONIBLE";
